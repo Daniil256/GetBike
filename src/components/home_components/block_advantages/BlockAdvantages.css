@@ -1,0 +1,55 @@
+.BlockAdvantages .subtitle {
+  height: 100px;
+  margin-top: 50px;
+}
+
+.BlockAdvantages .inform_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.BlockAdvantages .inform_block .block {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  height: 70vh;
+}
+
+.BlockAdvantages .inform_block .block .text {
+  padding: 0 5vw;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.BlockAdvantages .inform_block .block .text h3 {
+  font-size: 27px;
+  margin-bottom: 20px;
+  font-weight: 900;
+}
+
+.BlockAdvantages .inform_block .block .text p {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.BlockAdvantages .inform_block .block img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}

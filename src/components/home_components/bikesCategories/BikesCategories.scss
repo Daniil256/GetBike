@@ -1,0 +1,70 @@
+.bikes__page {
+    .block {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        padding: 10px 0;
+        .bike__page__block {
+            flex: 0 1 33.333%;
+            height: 300px;
+            padding: 20px 5%;
+            transition: 0.5s ease;
+            position: relative;
+            z-index: 1;
+            cursor: pointer;
+            &:hover {
+                transform: scale(1.05);
+                z-index: 3;
+            }
+            &:hover .block_title {
+                background: linear-gradient(to bottom, rgba(184, 184, 184, 0.7) 0%, rgba(255, 255, 255, 0) 50%);
+            }
+            &:hover .block_title p {
+                opacity: 1;
+                transform: translateY(-5vh);
+            }
+
+            &.big {
+                flex: 0 1 66.666%;
+            }
+
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                object-position: center;
+                object-fit: cover;
+                transition: 1.5s ease;
+            }
+            .block_title {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0) 50%);
+
+                h3,
+                p {
+                    color: #fff;
+                    background-color: transparent;
+                    position: absolute;
+                    left: 5vw;
+                    z-index: 3;
+                }
+                h3 {
+                    top: 5%;
+                    font-size: 40px;
+                    font-weight: 900;
+                }
+                p {
+                    top: 35%;
+                    opacity: 0;
+                    transition: 0.5s ease;
+                }
+            }
+        }
+    }
+}

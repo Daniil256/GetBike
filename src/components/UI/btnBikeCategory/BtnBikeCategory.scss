@@ -1,0 +1,20 @@
+.BtnBikeCategory {
+    display: inline-block;
+    outline: 1px solid rgb(113, 135, 146);
+    color: rgb(113, 135, 146);
+    padding: 10px 40px;
+    border-radius: 20px;
+    transition: 0.5s ease;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    input {
+        display: none;
+    }
+    &.active,
+    &:hover {
+        color: #fff;
+        outline: none;
+        background-color: rgb(255, 111, 44);
+    }
+}

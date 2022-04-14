@@ -1,0 +1,54 @@
+.Footer {
+    border-top: 1px solid #ccc;
+    display: flex;
+    flex-wrap: wrap;
+    .navbar {
+        box-shadow: none;
+        position: static;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        ul {
+            justify-content: space-between;
+            li {
+                &.only_header {
+                    display: none;
+                }
+                a:hover,
+                a.active {
+                    background-color: #fff;
+                    color: rgb(255, 111, 44);
+                }
+            }
+        }
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .text {
+        flex: 0 1 60%;
+        p {
+            margin: 10px 0;
+            line-height: 1.8;
+            font-size: 12px;
+        }
+    }
+    .social {
+        flex: 0 1 40%;
+        display: flex;
+        justify-content: end;
+        img {
+            display: block;
+            width: 70px;
+            height: 70px;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}

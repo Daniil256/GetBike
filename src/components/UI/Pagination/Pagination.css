@@ -1,0 +1,15 @@
+.pagination {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagination li a {
+    font-size: 18px;
+    padding: 5px 15px;
+    font-weight: 900;
+}
+.pagination li a:hover {
+    color: rgb(255, 111, 44);
+}

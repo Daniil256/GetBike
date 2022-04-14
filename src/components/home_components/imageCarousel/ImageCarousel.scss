@@ -1,0 +1,83 @@
+.image_carousel {
+    width: 100%;
+    height: calc(100vh - 60px);
+    position: relative;
+    span {
+        position: absolute;
+        text-align: right;
+        bottom: 12vw;
+        line-height: 0.9;
+        right: 50px;
+        color: #fff;
+        font-size: 60px;
+        font-weight: 900;
+        width: 350px;
+        height: 100px;
+        &.blue {
+            color: rgb(57, 159, 255);
+        }
+        &.orange {
+            color: rgb(255, 227, 104);
+        }
+        &.pink {
+            color: rgb(237, 147, 255);
+        }
+    }
+    img {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+    }
+    .button_more {
+        color: #fff;
+        background-color: rgb(255, 111, 44);
+        border-radius: 5px;
+        position: absolute;
+        top: 60%;
+        left: 7%;
+        padding: 20px 100px;
+        z-index: 3;
+        font-family: "Arial Narrow Bold", sans-serif;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.2s ease;
+        &:hover {
+            box-shadow: 0 0 5px 1px rgb(214, 92, 35);
+        }
+    }
+    .button_left,
+    .button_right {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: #fff;
+        opacity: 0.6;
+        bottom: 5%;
+        z-index: 3;
+        transition: 0.6s ease;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.8;
+        }
+        img {
+            top: calc(50% - 12.5px);
+            left: calc(50% - 7.5px);
+            width: 15px;
+            height: 25px;
+            background-color: transparent;
+        }
+    }
+    .button_left {
+        right: 12%;
+    }
+    .button_right {
+        right: 5%;
+    }
+}

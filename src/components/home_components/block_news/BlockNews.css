@@ -1,0 +1,112 @@
+.BlockNews {
+  background-color: #f7f7f7;
+}
+
+.BlockNews .subtitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 200px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.BlockNews .subtitle h2 {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.BlockNews .subtitle span {
+  position: relative;
+}
+
+.BlockNews .subtitle span::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 2px;
+  background-color: #ff6f2c;
+  top: 50%;
+  left: -250px;
+}
+
+.BlockNews .subtitle span a {
+  color: #ff6f2c;
+}
+
+.BlockNews .block_news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.BlockNews .block_news .block {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 calc(50% - 20px);
+          flex: 1 0 calc(50% - 20px);
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.BlockNews .block_news .block:hover {
+  -webkit-box-shadow: 0 0 30px 0 #c7c7c7;
+          box-shadow: 0 0 30px 0 #c7c7c7;
+}
+
+.BlockNews .block_news .block .img,
+.BlockNews .block_news .block .text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 calc(50% - 40px);
+          flex: 1 0 calc(50% - 40px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.BlockNews .block_news .block img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.BlockNews .block_news .block .text {
+  margin: 20px;
+}
+
+.BlockNews .block_news .block .text h3 {
+  font-size: 22px;
+}
+
+.BlockNews .block_news .block .text p {
+  padding-top: 20px;
+  line-height: 1.8;
+}
+
+.BlockNews .block_news .block .text span.date {
+  color: #ff6f2c;
+  padding-top: 10px;
+}

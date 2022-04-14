@@ -1,0 +1,163 @@
+.BikePage {
+    display: flex;
+    flex-direction: column;
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 50px;
+        .inform {
+            flex: 0 1 25%;
+            label {
+                width: auto;
+                margin: 0 auto 50px 0;
+                cursor: default;
+                &:hover {
+                    background-color: #fff;
+                    color: rgb(103, 122, 133);
+                    outline: 1px solid rgb(103, 122, 133);
+                }
+            }
+            span {
+                display: inline;
+                margin: 2px 5px 2px 0;
+                font-size: 16px;
+            }
+            .cost {
+                color: rgb(255, 111, 44);
+                font-size: 55px;
+                font-weight: 900;
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            }
+            p {
+                color: rgb(103, 122, 133);
+            }
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 50px;
+                width: 100%;
+                cursor: pointer;
+                border-radius: 3px;
+                border: 1px solid rgb(103, 122, 133);
+                transition: 0.3s ease;
+                margin: 10px 0;
+                background-color: #fff;
+                font-size: 16px;
+                &:hover,
+                &.buy {
+                    border: none;
+                    color: #fff;
+                    background-color: rgb(255, 111, 44);
+                }
+            }
+        }
+        .img {
+            flex: 0 1 70%;
+            align-items: center;
+            img {
+                display: block;
+                max-height: 500px;
+            }
+        }
+    }
+    .description {
+        background-color: #f3f3f3;
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .container {
+                flex: 0 1 100%;
+            }
+            .desc {
+                flex: 0 1 50%;
+                p {
+                    line-height: 1.8;
+                    padding: 0 100px 20px 0;
+                }
+                h3 {
+                    font-size: 25px;
+                    font-weight: 900;
+                    padding: 20px 0;
+                }
+                .technology {
+                    display: flex;
+                    align-items: center;
+                    padding: 20px 0;
+                    img {
+                        width: 50px;
+                        margin-right: 20px;
+                    }
+                    span {
+                        font-size: 22px;
+                        font-weight: 900;
+                        color: rgb(84, 101, 110);
+                    }
+                }
+                h4 {
+                    font-size: 22px;
+                    font-weight: 900;
+                }
+                .row {
+                    justify-content: start;
+                    margin: 20px 0;
+                    .link {
+                        position: relative;
+                        margin-right: 20px;
+                        transition: 0.3s ease;
+                        &:hover {
+                            box-shadow: 0 10px 40px 2px rgba(0, 0, 0, 0.5);
+                        }
+
+                        a img {
+                            object-fit: cover;
+                            width: 200px;
+                            height: 150px;
+                        }
+                        span {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            top: 0;
+                            left: 0;
+                            color: #eee;
+                            font-size: 20px;
+                            font-weight: 600;
+                            background-color: rgba(0, 0, 0, 0.5);
+                        }
+                    }
+                }
+                .feature {
+                    background-color: #fff;
+                    padding: 20px;
+                    .column {
+                        margin: 10px;
+                        width: 100px;
+                        img {
+                            width: 100px;
+                            height: 100px;
+                        }
+                        .block {
+                            width: 100px;
+                            height: 100px;
+                            padding: 10px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            background-color: #f3f3f3;
+                            .big_text {
+                                font-size: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

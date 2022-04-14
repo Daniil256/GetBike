@@ -1,0 +1,79 @@
+.bike_list {
+  padding-left: 40px;
+}
+
+.bike_list .block_sort {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.bike_list .block_sort span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.bike_list .block_sort .sort {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bike_list .block_sort .sort label {
+  cursor: pointer;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  margin: 0 10px;
+}
+
+.bike_list .block_sort .sort label.invert.active {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.bike_list .block_sort .sort label:hover {
+  color: #ff6f2c;
+}
+
+.bike_list .block_sort .sort label input {
+  display: none;
+}
+
+.bike_list .block_sort .btn_sort {
+  margin-left: 5px;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.bike_list .block_sort .btn_sort:hover {
+  color: #ff6f2c;
+}
+
+.bike_list .bike_items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -40px;
+}

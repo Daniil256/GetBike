@@ -1,0 +1,85 @@
+.MyModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.MyModal.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.MyModal .content {
+  padding: 50px;
+  background-color: #fff;
+  border-radius: 4px;
+  min-width: 250px;
+  position: relative;
+}
+
+.MyModal .content form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.MyModal .content form * {
+  margin: 5px;
+  border-radius: 4px;
+}
+
+.MyModal .content form h3 {
+  font-size: 30px;
+  font-weight: 100;
+}
+
+.MyModal .content form p {
+  color: #677a85;
+  font-size: 12px;
+  text-align: center;
+}
+
+.MyModal .content form input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #d5dee2;
+}
+
+.MyModal .content form .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #ff6f2c;
+}
+
+.MyModal .content form .button:disabled {
+  background-color: #ddd;
+  color: inherit;
+  cursor: default;
+}

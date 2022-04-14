@@ -1,0 +1,251 @@
+.BikePage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.BikePage .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 50px;
+}
+
+.BikePage .row .inform {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 25%;
+          flex: 0 1 25%;
+}
+
+.BikePage .row .inform label {
+  width: auto;
+  margin: 0 auto 50px 0;
+  cursor: default;
+}
+
+.BikePage .row .inform label:hover {
+  background-color: #fff;
+  color: #677a85;
+  outline: 1px solid #677a85;
+}
+
+.BikePage .row .inform span {
+  display: inline;
+  margin: 2px 5px 2px 0;
+  font-size: 16px;
+}
+
+.BikePage .row .inform .cost {
+  color: #ff6f2c;
+  font-size: 55px;
+  font-weight: 900;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.BikePage .row .inform p {
+  color: #677a85;
+}
+
+.BikePage .row .inform button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 50px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 3px;
+  border: 1px solid #677a85;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  margin: 10px 0;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+.BikePage .row .inform button:hover, .BikePage .row .inform button.buy {
+  border: none;
+  color: #fff;
+  background-color: #ff6f2c;
+}
+
+.BikePage .row .img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 70%;
+          flex: 0 1 70%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.BikePage .row .img img {
+  display: block;
+  max-height: 500px;
+}
+
+.BikePage .description {
+  background-color: #f3f3f3;
+}
+
+.BikePage .description .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.BikePage .description .container .container {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+}
+
+.BikePage .description .container .desc {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+.BikePage .description .container .desc p {
+  line-height: 1.8;
+  padding: 0 100px 20px 0;
+}
+
+.BikePage .description .container .desc h3 {
+  font-size: 25px;
+  font-weight: 900;
+  padding: 20px 0;
+}
+
+.BikePage .description .container .desc .technology {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0;
+}
+
+.BikePage .description .container .desc .technology img {
+  width: 50px;
+  margin-right: 20px;
+}
+
+.BikePage .description .container .desc .technology span {
+  font-size: 22px;
+  font-weight: 900;
+  color: #54656e;
+}
+
+.BikePage .description .container .desc h4 {
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.BikePage .description .container .desc .row {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  margin: 20px 0;
+}
+
+.BikePage .description .container .desc .row .link {
+  position: relative;
+  margin-right: 20px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.BikePage .description .container .desc .row .link:hover {
+  -webkit-box-shadow: 0 10px 40px 2px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 10px 40px 2px rgba(0, 0, 0, 0.5);
+}
+
+.BikePage .description .container .desc .row .link a img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 200px;
+  height: 150px;
+}
+
+.BikePage .description .container .desc .row .link span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 0;
+  left: 0;
+  color: #eee;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.BikePage .description .container .desc .feature {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.BikePage .description .container .desc .feature .column {
+  margin: 10px;
+  width: 100px;
+}
+
+.BikePage .description .container .desc .feature .column img {
+  width: 100px;
+  height: 100px;
+}
+
+.BikePage .description .container .desc .feature .column .block {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f3f3f3;
+}
+
+.BikePage .description .container .desc .feature .column .block .big_text {
+  font-size: 25px;
+}

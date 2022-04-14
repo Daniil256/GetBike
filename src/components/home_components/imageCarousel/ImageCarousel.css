@@ -1,0 +1,107 @@
+.image_carousel {
+  width: 100%;
+  height: calc(100vh - 60px);
+  position: relative;
+}
+
+.image_carousel span {
+  position: absolute;
+  text-align: right;
+  bottom: 12vw;
+  line-height: 0.9;
+  right: 50px;
+  color: #fff;
+  font-size: 60px;
+  font-weight: 900;
+  width: 350px;
+  height: 100px;
+}
+
+.image_carousel span.blue {
+  color: #399fff;
+}
+
+.image_carousel span.orange {
+  color: #ffe368;
+}
+
+.image_carousel span.pink {
+  color: #ed93ff;
+}
+
+.image_carousel img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.image_carousel .button_more {
+  color: #fff;
+  background-color: #ff6f2c;
+  border-radius: 5px;
+  position: absolute;
+  top: 60%;
+  left: 7%;
+  padding: 20px 100px;
+  z-index: 3;
+  font-family: "Arial Narrow Bold", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.image_carousel .button_more:hover {
+  -webkit-box-shadow: 0 0 5px 1px #d65c23;
+          box-shadow: 0 0 5px 1px #d65c23;
+}
+
+.image_carousel .button_left,
+.image_carousel .button_right {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.6;
+  bottom: 5%;
+  z-index: 3;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  cursor: pointer;
+}
+
+.image_carousel .button_left:hover,
+.image_carousel .button_right:hover {
+  opacity: 0.8;
+}
+
+.image_carousel .button_left img,
+.image_carousel .button_right img {
+  top: calc(50% - 12.5px);
+  left: calc(50% - 7.5px);
+  width: 15px;
+  height: 25px;
+  background-color: transparent;
+}
+
+.image_carousel .button_left {
+  right: 12%;
+}
+
+.image_carousel .button_right {
+  right: 5%;
+}
