@@ -8,15 +8,14 @@
         padding-bottom: 50px;
         .inform {
             flex: 0 1 25%;
-            label {
-                width: auto;
-                margin: 0 auto 50px 0;
-                cursor: default;
-                &:hover {
-                    background-color: #fff;
-                    color: rgb(103, 122, 133);
-                    outline: 1px solid rgb(103, 122, 133);
-                }
+            .category {
+                width: 100%;
+                text-align: center;
+                padding: 10px;
+                margin: 10px 0;
+                border-radius: 30px;
+                color: rgb(103, 122, 133);
+                outline: 1px solid rgb(103, 122, 133);
             }
             span {
                 display: inline;

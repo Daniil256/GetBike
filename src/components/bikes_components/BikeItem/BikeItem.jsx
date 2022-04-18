@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context2 } from "../../../App";
-import { BikeListObject } from "../../BikeListObject/BikeListObject";
 
 import './BikeItem.css'
 let ar = []
 let arCompare = []
-export const BikeItem = ({ currentCountry, category }) => {
+
+export const BikeItem = ({ category, currentCountry }) => {
     const context = useContext(Context2)
-    const BikeList = BikeListObject()
+
     const addElem = (e) => {
         if (context.bikesFavorites.length === 0) {
             ar = []
@@ -40,46 +40,49 @@ export const BikeItem = ({ currentCountry, category }) => {
     return (
         <>
             {currentCountry.map((data, index) =>
-                <div className="bike_item" key={BikeList[data].id}>
+                <div className="bike_item" key={data.id}>
                     {category === 'favorites'
                         ?
-                        <span className="clear_element" onClick={() => removeElem(index)}>&#10006;</span> : ''}
-                    <Link to={`${BikeList[data].id}`} >
-                        {BikeList[data].image ?
-                            <img srcSet={`../img/bikes_item_img/${BikeList[data].image}.jpg`} alt="error" />
-                            : <img srcSet={`../img/bikes_item_img/no_image.jpg`} alt="error" />}
-                        {BikeList[data].name || BikeList[data].wheelSize || BikeList[data].modelYear ?
-                            <div className="title">{BikeList[data].name} {BikeList[data].wheelSize} ({BikeList[data].modelYear})</div>
-                            : false}
-                    </Link>
-                    {BikeList[data].category ?
-                        <div className="category">{BikeList[data].category}</div>
-                        : false}
+                        <span className="clear_element" onClick={() => removeElem(index)}>&#10006;</span>
+                        : ''
+                    }
 
-                    <div className="row">{BikeList[data].cost ?
-                        <span className="cost">{BikeList[data].cost.toLocaleString()} ₽</span>
-                        : false}
+                    <Link to={`${data.id}`} >
+                        {data.image ?
+                            <img srcSet={`../img/bikes_item_img/${data.image}.jpg`} alt="error" />
+                            : <img srcSet={`../img/bikes_item_img/no_image.jpg`} alt="error" />}
+                        {data.name || data.wheelSize || data.modelYear ?
+                            <div className="title">{data.name} {data.wheelSize} ({data.modelYear})</div>
+                            : ''}
+                    </Link>
+                    {data.category ?
+                        <div className="category">{data.category}</div>
+                        : ''}
+
+                    <div className="row">{data.cost ?
+                        <span className="cost" id="section1">{data.cost.toLocaleString()} ₽</span>
+                        : ''}
                         {category === 'favorites'
                             ? ''
                             :
-                            <span className="symbol btn" title="Добавить в избранное" onClick={() => addElem(BikeList[data].id)}>&#9825;</span>
+                            <span className="symbol btn" title="Добавить в избранное" onClick={() => addElem(data)}>&#9825;</span>
                         }
-                        <span className="symbol btn" title="Добавить в сравнение" onClick={() => addElemCompare(BikeList[data].id)}>&#8646;</span>
+                        <span className="symbol btn" title="Добавить в сравнение" onClick={() => addElemCompare(data)}>&#8646;</span>
                     </div>
                     <div className="content">
 
-                        {BikeList[data].frameMaterial || BikeList[data].frameType ?
-                            <span><span className="font_bold">Рама:</span>{BikeList[data].frameMaterial} {BikeList[data].frameType}</span>
-                            : false}
-                        {BikeList[data].numberOfSpeeds ?
-                            <span><span className="font_bold">Количество скоростей:</span>{BikeList[data].numberOfSpeeds}</span>
-                            : false}
-                        {BikeList[data].wheelSize ?
-                            <span><span className="font_bold">Диаметр колеса:</span>{BikeList[data].wheelSize}"</span>
-                            : false}
-                        {BikeList[data].brakes ?
-                            <span><span className="font_bold">Тормоза:</span>{BikeList[data].brakes}</span>
-                            : false}
+                        {data.frameMaterial || data.frameType ?
+                            <span><span className="font_bold">Рама:</span>{data.frameMaterial} {data.frameType}</span>
+                            : ''}
+                        {data.numberOfSpeeds ?
+                            <span><span className="font_bold">Количество скоростей:</span>{data.numberOfSpeeds}</span>
+                            : ''}
+                        {data.wheelSize ?
+                            <span><span className="font_bold">Диаметр колеса:</span>{data.wheelSize}"</span>
+                            : ''}
+                        {data.brakes ?
+                            <span><span className="font_bold">Тормоза:</span>{data.brakes}</span>
+                            : ''}
                     </div>
                 </div>
             )}

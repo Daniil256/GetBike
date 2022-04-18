@@ -28,14 +28,12 @@
           flex: 0 1 25%;
 }
 
-.BikePage .row .inform label {
-  width: auto;
-  margin: 0 auto 50px 0;
-  cursor: default;
-}
-
-.BikePage .row .inform label:hover {
-  background-color: #fff;
+.BikePage .row .inform .category {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 30px;
   color: #677a85;
   outline: 1px solid #677a85;
 }

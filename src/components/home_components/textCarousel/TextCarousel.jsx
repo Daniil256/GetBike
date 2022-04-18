@@ -3,6 +3,7 @@ import Carousel from "../Carousel/Carousel";
 import './TextCarousel.css'
 const TextCarousel = () => {
     const [carouselNum, setCarouselNum] = useState(1)
+
     const click_left = () => {
         setCarouselNum(() => {
             let newOffset = carouselNum - 1

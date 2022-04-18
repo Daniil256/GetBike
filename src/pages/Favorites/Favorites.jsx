@@ -4,6 +4,7 @@ import { BikeItem } from "../../components/bikes_components/BikeItem/BikeItem"
 import { MyModal } from "../../components/UI/MyModal/MyModal"
 import { Subtitle } from "../../components/UI/Subtitle/Subtitle"
 import './Favorites.css'
+
 export const Favorites = () => {
     const [modal, setModal] = useState(false)
     const context = useContext(Context2)

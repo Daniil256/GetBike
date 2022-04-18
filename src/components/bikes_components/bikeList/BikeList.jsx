@@ -33,6 +33,7 @@ export const BikeList = ({ searchAndSortedPosts, setSelectedSort, setInvert, cur
             <div className="bike_items">
                 <BikeItem
                     currentCountry={currentCountry}
+                    searchAndSortedPosts={searchAndSortedPosts}
                 />
             </div>
         </div>

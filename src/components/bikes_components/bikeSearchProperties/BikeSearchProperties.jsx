@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { MyCheckBox } from "../../UI/MyCheckBox/MyCheckBox";
 import { MyRadio } from "../../UI/MyRadio/MyRadio";
 import { MySelect } from "../../UI/MySelect/MySelect";
 import './BikeSearchProperties.css'
+
 export const BikeSearchProperties = ({ bikeList, setSearchQuery }) => {
+
     return (
         <div className="bike_search_properties">
             <h3>Поиск</h3>

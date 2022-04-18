@@ -1,15 +1,32 @@
 import React from "react";
 import './BtnBikeCategory.css'
 
-export const BtnBikeCategory = ({ value, setSearchQuery }) => {
+export const BtnBikeCategory = ({ setSearchQuery, modelYearList }) => {
+
     return (
-        <label className="BtnBikeCategory"
-            onClick={(e) => setSearchQuery({ category: e.target.value })}
-        >
-            <input type='radio'
-                name="BtnBikeCategory"
-                value={value}
-            />
-            {value}</label>
+        <>
+            {modelYearList.length > 0
+                ?
+                <>
+                    <label className="BtnBikeCategory"
+                        onClick={(e) => setSearchQuery({ category: e.target.value })}>
+                        <input type='radio'
+                            name="BtnBikeCategory"
+                            value='Все'
+                        />
+                        Все</label>
+                    {modelYearList.map((item) =>
+                        <label className="BtnBikeCategory" key={item}
+                            onClick={(e) => setSearchQuery({ category: e.target.value })}>
+                            <input type='radio'
+                                name="BtnBikeCategory"
+                                value={item}
+                            />
+                            {item}</label>
+                    )}
+                </>
+                : ''
+            }
+        </>
     )
 }

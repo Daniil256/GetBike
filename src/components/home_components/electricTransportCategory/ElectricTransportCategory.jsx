@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Subtitle } from "../../UI/Subtitle/Subtitle";
 import './ElectricTransportCategory.css'
 const ElectricTransportCategory = () => {
     return (
         <div className="ElectricTransportCategory">
             <Subtitle title='Электротранспорт' link='/electro_bikes' linkName='Смотреть все модели' />
-            <div className="block">
+            <Link to='el_bikes' className="block" >
                 <div className="electric__transport__block big">
                     <img src="../img/ElectricTransportPage/1.jpg" alt="error" />
                     <div className="block_title">
@@ -26,7 +27,7 @@ const ElectricTransportCategory = () => {
                         <h3>Cyclone</h3>
                     </div>
                 </div>
-            </div>
+            </Link>
         </div>
     )
 }

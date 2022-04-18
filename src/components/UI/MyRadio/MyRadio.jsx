@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import './MyRadio.css'
 
 export const MyRadio = ({ values, value, setSearchQuery, nameInput, onChange }) => {
-
-
 
     return (
         <>

@@ -4,26 +4,25 @@
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .Footer .navbar {
   -webkit-box-shadow: none;
-          box-shadow: none;
-  position: static;
+  box-shadow: none;
   height: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .Footer .navbar ul {
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .Footer .navbar ul li.only_header {
@@ -41,16 +40,16 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .Footer .text {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 60%;
-          flex: 0 1 60%;
+  -ms-flex: 0 1 60%;
+  flex: 0 1 60%;
 }
 
 .Footer .text p {
@@ -61,14 +60,14 @@
 
 .Footer .social {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 40%;
-          flex: 0 1 40%;
+  -ms-flex: 0 1 40%;
+  flex: 0 1 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  -ms-flex-pack: end;
+  justify-content: end;
 }
 
 .Footer .social img {
@@ -82,5 +81,5 @@
 
 .Footer .social img:hover {
   -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }

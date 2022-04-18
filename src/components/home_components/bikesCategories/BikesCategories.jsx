@@ -1,12 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Subtitle } from "../../UI/Subtitle/Subtitle";
 import './BikesCategories.css'
 
 const BikesCategories = () => {
     return (
+
         <div className="bikes__page">
             <Subtitle title='Велосипеды' />
-            <div className="block">
+            <Link to='bikes' className="block">
                 <div className="bike__page__block big">
                     <img src="./img/bikesPage/bike__page__block_1.jpg" alt="error" />
                     <div className="block_title">
@@ -35,7 +37,7 @@ const BikesCategories = () => {
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                     </div>
                 </div>
-            </div>
+            </Link>
         </div>
     )
 }

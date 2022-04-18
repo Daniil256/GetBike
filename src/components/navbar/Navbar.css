@@ -33,36 +33,41 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 
 .navbar ul li .value {
   font-size: 19px;
-  margin-left: 1px;
+  margin-left: 10px;
 }
 
 .navbar ul li a {
-  color: #444;
+  color: #677a85;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100%;
-  padding: 0 10px;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
+  width: 100%;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .navbar ul li a.active, .navbar ul li a:hover {
-  background-color: #eee;
-  color: #000;
+  background-color: #f0f0f0;
+  color: #2e3e47;
 }
 
 .navbar ul li a.logo {
   font-size: 30px;
   font-family: "Bungee", cursive;
   font-weight: 900;
+  color: #2e3e47;
 }
 
 .navbar ul li a.logo.active, .navbar ul li a.logo:hover {

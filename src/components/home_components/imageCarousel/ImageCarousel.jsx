@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Carousel from "../Carousel/Carousel";
 import './ImageCarousel.css'
 
@@ -39,7 +40,7 @@ const ImageCarousel = () => {
                         <span >Лучшее - семье!</span>
                     </div>
                 </Carousel>
-                <div className="button_more">Подробнее</div>
+                <Link to='bikes' className="button_more">Подробнее</Link>
                 <div className="button_left" onClick={click_left}><img src="./img/image_carousel/button_left.png" alt="error" /></div>
                 <div className="button_right" onClick={click_right}><img src="./img/image_carousel/button_right.png" alt="error" /></div>
             </div>

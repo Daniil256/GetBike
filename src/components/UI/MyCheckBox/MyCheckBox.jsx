@@ -8,6 +8,7 @@ export const MyCheckBox = ({ bikeList, path, value, setSearchQuery }) => {
             OnlyUniqueItems.push(bikeList[i][path])
         }
     }
+
     return (
         <>
             <label className="label">

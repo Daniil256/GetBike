@@ -5,11 +5,12 @@ import { BikesCategory } from "../../components/bikes_components/bikesCategory/B
 import { BikeSearchProperties } from "../../components/bikes_components/bikeSearchProperties/BikeSearchProperties";
 import { BikeList } from "../../components/bikes_components/bikeList/BikeList";
 import { Pagination } from "../../components/UI/Pagination/Pagination";
-import { BikeListObject } from "../../components/BikeListObject/BikeListObject";
-
+import { BikeList2 } from "../../components/BikeListObject/BikeListObject";
+import { useParams } from "react-router-dom";
 
 export const Bikes = () => {
-    const [bikeList, setBikeList] = useState(BikeListObject)
+
+    const [bikeList, setBikeList] = useState([])
     const [searchQuery, setSearchQuery] = useState({ name: '' })
     const [selectedSort, setSelectedSort] = useState('')
     const [invert, setInvert] = useState(false)
@@ -17,16 +18,32 @@ export const Bikes = () => {
     const [currentPage, setCurrentPage] = useState(1)
     const [countriesPerPage] = useState(15)
 
+    const cat = useParams()
+    useMemo(() => {
+        const ar = []
+        if (cat.cat === 'bikes') {
+            BikeList2.filter((item) => {
+                return !item.power && ar.push(item)
+            })
+        }
+        if (cat.cat === 'el_bikes') {
+            BikeList2.filter((item) => {
+                return item.power && ar.push(item)
+            })
+        }
+        setBikeList(ar)
+    }, [cat.cat])
     const sortedPosts = useMemo(() => {
-        if (!selectedSort || selectedSort === 'default')
-            return bikeList
-        if (!invert) {
-            return [...bikeList].sort((a, b) =>
-                String(a[selectedSort]).localeCompare(String(b[selectedSort])))
-        } else {
+        if (!selectedSort || selectedSort === 'default') return bikeList
+        if (invert) {
             return [...bikeList].sort((b, a) =>
                 String(a[selectedSort]).localeCompare(String(b[selectedSort])))
         }
+        if (!invert) {
+            return [...bikeList].sort((a, b) =>
+                String(a[selectedSort]).localeCompare(String(b[selectedSort])))
+        }
+
     }, [bikeList, selectedSort, invert])
 
     const searchAndSortedPosts = useMemo(() => {
@@ -37,7 +54,8 @@ export const Bikes = () => {
                     ?
                     String(item.cost).includes(String(searchQuery.to))
                     :
-                    String(item.cost).includes(''))
+                    String(item.cost).includes('')
+            )
         }
         if (Object.keys(searchQuery)[0] === 'from') {
             return sortedPosts.filter(item =>
@@ -47,24 +65,22 @@ export const Bikes = () => {
                     :
                     String(item.cost).includes(''))
         }
-        if (Object.values(searchQuery)[0] === 'Все')
-            return bikeList
-        return sortedPosts.filter(item =>
-            String(item[Object.keys(searchQuery)[0]]).includes(String(searchQuery[Object.keys(searchQuery)[0]])))
-    }, [searchQuery, sortedPosts])
+        if (Object.values(searchQuery)[0] === 'Все') return bikeList
+        if (Object.values(searchQuery)[0] === '') return sortedPosts
 
+
+        return sortedPosts.filter((_item, index) =>
+            String(bikeList[index][Object.keys(searchQuery)[0]]).includes(String(searchQuery[Object.keys(searchQuery)[0]])))
+
+    }, [searchQuery, sortedPosts, bikeList])
 
     const lastCountryIndex = currentPage * countriesPerPage
     const firstCountryIndex = lastCountryIndex - countriesPerPage
-    const items = []
-    searchAndSortedPosts.map(item => {
-        items.push(item.id)
-    })
-    const currentCountry = items.slice(firstCountryIndex, lastCountryIndex)
+    const currentCountry = searchAndSortedPosts.slice(firstCountryIndex, lastCountryIndex)
     return (
         <div className="Bikes container">
 
-            <Subtitle title='Велосипеды' />
+            <Subtitle title={cat.cat === 'bikes' ? 'Велосипеды' : 'Электровелосипеды'} />
 
             <BikesCategory
                 bikeList={bikeList}
@@ -78,8 +94,7 @@ export const Bikes = () => {
                 searchAndSortedPosts={searchAndSortedPosts}
                 currentCountry={currentCountry}
                 setSelectedSort={setSelectedSort}
-                setInvert={setInvert}
-            />
+                setInvert={setInvert} />
 
             <Pagination
                 countriesPerPage={countriesPerPage}

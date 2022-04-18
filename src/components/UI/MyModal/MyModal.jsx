@@ -6,6 +6,7 @@ export const MyModal = ({ visible, setVisible }) => {
     const [city, setCity] = useState('')
     const [tel, setTel] = useState('')
     const [persData, setPersData] = useState('')
+
     const enableButton = () => {
         if (name !== '' && region !== '' && city !== '' && tel !== '' && persData === true) {
             return false

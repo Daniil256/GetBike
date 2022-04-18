@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import { Context2 } from "../../App";
-import { BikeListObject } from "../../components/BikeListObject/BikeListObject";
 import { Subtitle } from "../../components/UI/Subtitle/Subtitle";
 import './Compare.css'
 let ar = []
+
 export const Compare = () => {
+
     const context = useContext(Context2)
-    const BikeList = BikeListObject()
     context.setBikeNumCompare(context.bikesCompare.length)
     const clear = () => {
         context.setBikesCompare([])
@@ -54,23 +54,23 @@ export const Compare = () => {
                         </table>
                     </div>
                     {context.bikesCompare.map((data, index) =>
-                        <div className="bike-Item" key={data}>
+                        <div className="bike-Item" key={data.id}>
                             <span className="clear_element" onClick={() => removeElem(index)}>&#10006;</span>
 
-                            <img srcSet={`../img/bikes_item_img/${BikeList[data].image}.jpg`} alt="error" />
+                            <img srcSet={`../img/bikes_item_img/${data.image}.jpg`} alt="error" />
                             <table>
                                 <tbody>
                                     <tr>
-                                        <td>{BikeList[data].name}</td>
-                                        <td>{BikeList[data].category}</td>
-                                        <td>{BikeList[data].numberOfSpeeds}</td>
-                                        <td>{BikeList[data].wheelSize}</td>
-                                        <td>{BikeList[data].brakes}</td>
-                                        <td>{BikeList[data].cost.toLocaleString()} ₽</td>
-                                        <td>{BikeList[data].modelYear}</td>
-                                        <td>{BikeList[data].sex}</td>
-                                        <td>{BikeList[data].frameType}</td>
-                                        <td>{BikeList[data].age}</td>
+                                        <td>{data.name}</td>
+                                        <td>{data.category}</td>
+                                        <td>{data.numberOfSpeeds}</td>
+                                        <td>{data.wheelSize}</td>
+                                        <td>{data.brakes}</td>
+                                        <td>{data.cost.toLocaleString()} ₽</td>
+                                        <td>{data.modelYear}</td>
+                                        <td>{data.sex}</td>
+                                        <td>{data.frameType}</td>
+                                        <td>{data.age}</td>
                                     </tr>
                                 </tbody>
                             </table>
