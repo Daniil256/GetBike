@@ -8,6 +8,10 @@
           flex-direction: column;
 }
 
+.BikePage .container {
+  margin: 0 auto 0 0;
+}
+
 .BikePage .row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20,6 +24,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-bottom: 50px;
+  width: 100%;
 }
 
 .BikePage .row .inform {

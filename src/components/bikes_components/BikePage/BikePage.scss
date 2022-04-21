@@ -1,11 +1,15 @@
 .BikePage {
     display: flex;
     flex-direction: column;
+    .container {
+        margin: 0 auto 0 0;
+    }
     .row {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         padding-bottom: 50px;
+        width: 100%;
         .inform {
             flex: 0 0 250px;
             .category {
