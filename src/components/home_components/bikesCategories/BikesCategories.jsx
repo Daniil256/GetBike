@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Subtitle } from "../../UI/Subtitle/Subtitle";
 import './BikesCategories.css'
 
-const BikesCategories = () => {
+export const BikesCategories = () => {
     return (
 
         <div className="bikes__page">
@@ -41,4 +41,3 @@ const BikesCategories = () => {
         </div>
     )
 }
-export default BikesCategories

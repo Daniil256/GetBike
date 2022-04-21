@@ -4,7 +4,7 @@
 
 .User .title {
   position: relative;
-  height: 70vh;
+  height: 50vmin;
 }
 
 .User .title img {
@@ -21,7 +21,7 @@
 
 .User .title h2 {
   color: #fff;
-  font-size: 55px;
+  font-size: clamp(30px, 8vw, 55px);
   padding-top: 5vw;
   font-weight: 900;
   position: absolute;
@@ -29,8 +29,8 @@
 
 .User .row .table_of_contents {
   background-color: #eee;
-  padding: 15px;
-  margin: 10px;
+  padding: clamp(5px, 2vw, 15px);
+  margin: clamp(5px, 2vw, 10px);
   -webkit-box-flex: 0;
       -ms-flex: 0 1 25%;
           flex: 0 1 25%;
@@ -44,7 +44,7 @@
 }
 
 .User .row .content h2 {
-  font-size: 45px;
+  font-size: clamp(25px, 7vw, 45px);
   font-weight: 900;
   color: #ff6f2c;
   margin-bottom: 20px;
@@ -53,14 +53,14 @@
 .User .row .content h3 {
   font-weight: 900;
   font-size: 20px;
-  margin: 30px 0;
+  margin: clamp(10px, 3vw, 20px) 0;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 100%;
           flex: 0 1 100%;
 }
 
 .User .row .content p {
-  padding: 20px 0;
+  padding: clamp(5px, 3vw, 20px) 0;
   line-height: 1.8;
 }
 
@@ -82,4 +82,13 @@
   color: #ff6f2c;
   font-size: 20px;
   font-weight: 900;
+}
+
+@media (max-width: 600px) {
+  .User .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }

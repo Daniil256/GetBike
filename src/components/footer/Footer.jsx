@@ -1,12 +1,19 @@
 import React from "react";
-import Navbar from "../navbar/Navbar";
+import { NavLink } from "react-router-dom";
 import './Footer.css'
 
-const Footer = () => {
+export const Footer = () => {
     return (
-        <div className="Footer">
-            <Navbar />
-            <div className="container">
+        <div className="Footer container">
+            <ul>
+                <li className="logo"><NavLink className="logo" to="/">GetBike<img src="../img/navbar/logo2.png" alt="error" /></NavLink></li>
+                <li><NavLink to="/">Лучшее - семье</NavLink></li>
+                <li><NavLink to="bikes">Велосипеды</NavLink></li>
+                <li><NavLink to="el_bikes">Электротранспорт</NavLink></li>
+                <li><NavLink to="user">Пользователю</NavLink></li>
+                <li><NavLink to="buy">Где купить</NavLink></li>
+            </ul>
+            <div>
                 <div className="text">
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, possimus fugiat ipsa ducimus ipsum provident cumque quas esse iure eos deserunt error aut repudiandae asperiores, dolorum optio, facere maiores amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate obcaecati voluptatem vitae, reprehenderit debitis rem aut ad voluptatibus libero nulla nesciunt beatae? Temporibus tenetur enim, eius magnam corporis expedita quas.</p>
                     <p>Lorem ipsum dolor sit.</p>
@@ -23,4 +30,3 @@ const Footer = () => {
 
     )
 }
-export default Footer

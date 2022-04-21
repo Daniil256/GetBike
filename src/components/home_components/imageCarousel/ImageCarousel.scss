@@ -5,11 +5,11 @@
     span {
         position: absolute;
         text-align: right;
-        bottom: 12vw;
+        top: clamp(25vh, 50vw, 50vh);
         line-height: 0.9;
         right: 50px;
         color: #fff;
-        font-size: 60px;
+        font-size: clamp(40px, 15vw, 60px);
         font-weight: 900;
         width: 350px;
         height: 100px;
@@ -38,7 +38,7 @@
         position: absolute;
         top: 60%;
         left: 7%;
-        padding: 20px 100px;
+        padding: 20px 10vw;
         z-index: 3;
         font-family: "Arial Narrow Bold", sans-serif;
         font-size: 16px;
@@ -59,7 +59,7 @@
         border-radius: 50%;
         background-color: #fff;
         opacity: 0.6;
-        bottom: 5%;
+        bottom: 50px;
         z-index: 3;
         transition: 0.6s ease;
         cursor: pointer;
@@ -75,9 +75,9 @@
         }
     }
     .button_left {
-        right: 12%;
+        right: 140px;
     }
     .button_right {
-        right: 5%;
+        right: 50px;
     }
 }

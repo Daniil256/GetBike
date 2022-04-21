@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './App.css'
 import { Layout } from "./components/Layout/Layout";
-import Home from "./pages/Home/Home";
+import { Home } from "./pages/Home/Home";
 import { Bikes } from "./pages/Bikes/Bikes";
 import { Routes, Route } from 'react-router-dom'
 import { BikePage } from "./components/bikes_components/BikePage/BikePage";
@@ -24,9 +24,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />} >
           <Route index element={<Home />} />
-          <Route path=":cat" element={<Bikes />} />
-          <Route path=":cat/:id" element={<BikePage />} />
-          <Route path=":cat/:id" element={<BikePage />} />
+          <Route path=":category" element={<Bikes />} />
+          <Route path=":category/:id" element={<BikePage />} />
           <Route path="favorites" element={<Favorites />} />
           <Route path="favorites/:id" element={<BikePage type='favorites' />} />
           <Route path="compare" element={<Compare />} />

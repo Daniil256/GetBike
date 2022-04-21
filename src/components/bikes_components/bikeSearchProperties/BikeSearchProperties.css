@@ -1,6 +1,14 @@
 .bike_search_properties {
-  padding: 20px;
+  padding: clamp(10px, 1vw, 20px);
   font-size: 18px;
+}
+
+.bike_search_properties .column {
+  margin: 15px;
+}
+
+.bike_search_properties .column * {
+  padding: 5px 0;
 }
 
 .bike_search_properties h3 {
@@ -9,6 +17,13 @@
   padding: 10px 0;
 }
 
-.bike_search_properties * {
-  padding: 5px 0;
+@media (max-width: 860px) {
+  .bike_search_properties {
+    margin: 0 auto;
+  }
+  .bike_search_properties .order {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
 }

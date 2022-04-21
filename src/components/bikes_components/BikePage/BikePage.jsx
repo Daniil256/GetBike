@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import { BikeList2 } from "../../BikeListObject/BikeListObject";
+import { BikeListObject } from "../../BikeListObject/BikeListObject";
 import { MyModal } from "../../UI/MyModal/MyModal";
 import { Subtitle } from "../../UI/Subtitle/Subtitle";
 import './BikePage.css'
@@ -9,7 +9,7 @@ export const BikePage = () => {
     const [modal, setModal] = useState(false)
     const { id } = useParams()
 
-    const BikeList = BikeList2
+    const BikeList = BikeListObject
 
     const bikeCategory = () => {
         if (BikeList[id].category === 'Городские') {

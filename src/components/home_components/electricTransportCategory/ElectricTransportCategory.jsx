@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Subtitle } from "../../UI/Subtitle/Subtitle";
 import './ElectricTransportCategory.css'
-const ElectricTransportCategory = () => {
+export const ElectricTransportCategory = () => {
     return (
         <div className="ElectricTransportCategory">
             <Subtitle title='Электротранспорт' link='/electro_bikes' linkName='Смотреть все модели' />
@@ -31,4 +31,3 @@ const ElectricTransportCategory = () => {
         </div>
     )
 }
-export default ElectricTransportCategory

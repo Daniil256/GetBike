@@ -1,7 +1,7 @@
 import React from "react"
 import { Subtitle } from "../../UI/Subtitle/Subtitle"
 import './BlockNews.css'
-const BlockNews = () => {
+export const BlockNews = () => {
     return (
         <div className="BlockNews">
             <Subtitle title='Новости' link='/news' linkName='Смотреть все новости' />
@@ -52,4 +52,3 @@ const BlockNews = () => {
 
     )
 }
-export default BlockNews

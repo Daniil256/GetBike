@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Carousel from "../Carousel/Carousel";
+import { Carousel } from "../Carousel/Carousel";
 import './TextCarousel.css'
-const TextCarousel = () => {
+export const TextCarousel = () => {
     const [carouselNum, setCarouselNum] = useState(1)
 
     const click_left = () => {
@@ -47,6 +47,4 @@ const TextCarousel = () => {
             <div className="btn_right" onClick={click_right}><img src="./img/text_carousel/arrow_right.png" alt="error" /></div>
         </div>
     )
-
 }
-export default TextCarousel

@@ -1,7 +1,7 @@
 import React from "react";
 import { Subtitle } from "../../UI/Subtitle/Subtitle";
 import './BlockTechnology.css'
-const BlockTechnology = () => {
+export const BlockTechnology = () => {
     return (<>
         <div className="container">
             <div className="BlockTechnology">
@@ -18,4 +18,3 @@ const BlockTechnology = () => {
     </>
     )
 }
-export default BlockTechnology

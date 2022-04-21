@@ -1,4 +1,4 @@
-export const BikeList2 = [
+export const BikeListObject = [
     {
         name: 'BIZON',
         BatteryCapacity: 13,
@@ -763,6 +763,6 @@ export const BikeList2 = [
         image: 'woman4'
     }
 ]
-for (let i = 0; i < BikeList2.length; i++) {
-    BikeList2[i]['id'] = i
+for (let i = 0; i < BikeListObject.length; i++) {
+    BikeListObject[i]['id'] = i
 }

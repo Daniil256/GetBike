@@ -22,7 +22,7 @@
 }
 
 .MyModal .content {
-  padding: 50px;
+  padding: clamp(5px, 2vw, 50px);
   background-color: #fff;
   border-radius: 4px;
   min-width: 250px;

@@ -1,13 +1,23 @@
 .bike_search_properties {
-    padding: 20px;
+    padding: clamp(10px, 1vw, 20px);
     font-size: 18px;
-
+    .column {
+        margin: 15px;
+        * {
+            padding: 5px 0;
+        }
+    }
     h3 {
         font-weight: 900;
         font-size: 21px;
         padding: 10px 0;
     }
-    * {
-        padding: 5px 0;
+}
+@media (max-width: 860px) {
+    .bike_search_properties {
+        margin: 0 auto;
+        .order {
+            order: 1;
+        }
     }
 }

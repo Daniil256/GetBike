@@ -1,7 +1,7 @@
 import React from "react";
 import './Carousel.css'
 
-const Carousel = ({ children }) => {
+export const Carousel = ({ children }) => {
 
     return (
         <div className="Carousel">
@@ -9,4 +9,3 @@ const Carousel = ({ children }) => {
         </div>
     )
 }
-export default Carousel

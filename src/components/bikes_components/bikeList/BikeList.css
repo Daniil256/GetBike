@@ -1,5 +1,6 @@
 .bike_list {
   padding-left: 40px;
+  margin-bottom: 10px;
 }
 
 .bike_list .block_sort {
@@ -12,6 +13,13 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  overflow: hidden;
+}
+
+.bike_list .block_sort.active {
+  max-height: 200px;
 }
 
 .bike_list .block_sort span {
@@ -45,11 +53,6 @@
   margin: 0 10px;
 }
 
-.bike_list .block_sort .sort label.invert.active {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
 .bike_list .block_sort .sort label:hover {
   color: #ff6f2c;
 }
@@ -76,4 +79,44 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0 -40px;
+}
+
+@media (max-width: 1000px) {
+  .bike_list {
+    padding-left: 20px;
+  }
+  .bike_list .bike_items {
+    margin: 0;
+  }
+}
+
+@media (max-width: 860px) {
+  .bike_list {
+    padding: 0;
+  }
+  .bike_list .block_sort {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-height: 0;
+    background-color: #f7f7f7;
+    padding: 0 10px;
+  }
+  .bike_list .block_sort * {
+    padding: 5px;
+    font-weight: 900;
+  }
+  .bike_list .block_sort .sort {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .bike_list .block_sort .sort label {
+    margin: 0;
+  }
 }

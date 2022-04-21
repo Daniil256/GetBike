@@ -1,9 +1,15 @@
 .bike_list {
     padding-left: 40px;
+    margin-bottom: 10px;
     .block_sort {
         flex: 0 1 100%;
         display: flex;
         justify-content: space-between;
+        transition: 0.5s ease;
+        overflow: hidden;
+        &.active {
+            max-height: 200px;
+        }
         span {
             display: flex;
             align-items: center;
@@ -18,9 +24,6 @@
                 cursor: pointer;
                 transition: 0.2s ease;
                 margin: 0 10px;
-                &.invert.active {
-                    transform: rotate(180deg);
-                }
                 &:hover {
                     color: rgb(255, 111, 44);
                 }
@@ -43,5 +46,35 @@
         display: flex;
         flex-wrap: wrap;
         margin: 0 -40px;
+    }
+}
+@media (max-width: 1000px) {
+    .bike_list {
+        padding-left: 20px;
+        .bike_items {
+            margin: 0;
+        }
+    }
+}
+@media (max-width: 860px) {
+    .bike_list {
+        padding: 0;
+        .block_sort {
+            flex-direction: column;
+            max-height: 0;
+            background-color: rgb(247, 247, 247);
+            padding: 0 10px;
+            * {
+                padding: 5px;
+                font-weight: 900;
+            }
+            .sort {
+                flex-direction: column;
+                align-items: flex-start;
+                label {
+                    margin: 0;
+                }
+            }
+        }
     }
 }

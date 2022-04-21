@@ -7,9 +7,11 @@
 }
 .pagination li a {
     font-size: 18px;
+    cursor: pointer;
     padding: 5px 15px;
     font-weight: 900;
 }
+.pagination li a.active,
 .pagination li a:hover {
     color: rgb(255, 111, 44);
 }

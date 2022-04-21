@@ -12,7 +12,7 @@
   -webkit-box-flex: 0;
       -ms-flex: 0 1 33.333%;
           flex: 0 1 33.333%;
-  height: 300px;
+  height: clamp(150px, 30vw, 300px);
   padding: 20px 5%;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
@@ -79,7 +79,7 @@
 
 .bikes__page .block .bike__page__block .block_title h3 {
   top: 5%;
-  font-size: 40px;
+  font-size: clamp(15px, 4vw, 50px);
   font-weight: 900;
 }
 
@@ -88,4 +88,17 @@
   opacity: 0;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
+}
+
+@media (max-width: 400px) {
+  .bikes__page .block .bike__page__block {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+  }
+  .bikes__page .block .bike__page__block.big {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+  }
 }

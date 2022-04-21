@@ -7,7 +7,7 @@
         justify-content: space-between;
         padding-bottom: 50px;
         .inform {
-            flex: 0 1 25%;
+            flex: 0 0 250px;
             .category {
                 width: 100%;
                 text-align: center;
@@ -27,6 +27,7 @@
                 font-size: 55px;
                 font-weight: 900;
                 font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                white-space: nowrap;
             }
             p {
                 color: rgb(103, 122, 133);
@@ -53,11 +54,13 @@
             }
         }
         .img {
-            flex: 0 1 70%;
+            flex: 1 1 75%;
+            min-width: 200px;
             align-items: center;
             img {
                 display: block;
                 max-height: 500px;
+                max-width: 100%;
             }
         }
     }
@@ -156,6 +159,26 @@
                         }
                     }
                 }
+            }
+        }
+    }
+}
+@media (max-width: 600px) {
+    .BikePage {
+        .row {
+            flex-direction: column-reverse;
+        }
+        .description .container .desc {
+            flex: 1 1 100%;
+            .row {
+                flex-direction: row;
+                flex-wrap: wrap;
+                .link {
+                    margin: 10px;
+                }
+            }
+            p {
+                padding: 0;
             }
         }
     }

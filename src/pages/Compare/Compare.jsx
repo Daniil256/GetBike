@@ -21,9 +21,9 @@ export const Compare = () => {
     }
 
     return (
-        <div className="Compare">
+        <div className="Compare container">
             <Subtitle title='Сравнение' />
-            <div className="row container">
+            <div className="row">
                 {context.bikesCompare.length
                     ?
                     <div className="options">

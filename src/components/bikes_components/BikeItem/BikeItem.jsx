@@ -3,39 +3,44 @@ import { Link } from "react-router-dom";
 import { Context2 } from "../../../App";
 
 import './BikeItem.css'
-let ar = []
-let arCompare = []
+// тут я столкнулся с проблемой, что если создать переменную внутри функции React, эта
+// переменная задублируется для каждого одинакового элемента, из которого я обращаюсь
+// к этой переменной. и получилось у меня, что 49 велосипедов и 49 массивов, любезно 
+// созданных для меня автоматически. Решил я эту проблему не совсем красиво, просто вынес 
+// переменную из функции наружу. простите меня за это, я обещаю исправиться
+let arList = []
+let arCompareList = []
 
 export const BikeItem = ({ category, currentCountry }) => {
     const context = useContext(Context2)
 
     const addElem = (e) => {
         if (context.bikesFavorites.length === 0) {
-            ar = []
+            arList = []
         }
         if (!context.bikesFavorites.includes(e)) {
-            ar.push(e)
-            context.setBikesFavorites(ar)
-            context.setBikeNum(ar.length)
+            arList.push(e)
+            context.setBikesFavorites(arList)
+            context.setBikeNum(arList.length)
         }
     }
     const addElemCompare = (e) => {
         if (context.bikesCompare.length === 3) return
 
         if (context.bikesCompare.length === 0) {
-            arCompare = []
+            arCompareList = []
         }
         if (!context.bikesCompare.includes(e)) {
-            arCompare.push(e)
-            context.setBikesCompare(arCompare)
-            context.setBikeNumCompare(arCompare.length)
+            arCompareList.push(e)
+            context.setBikesCompare(arCompareList)
+            context.setBikeNumCompare(arCompareList.length)
         }
     }
     const removeElem = (e) => {
-        ar = context.bikesFavorites
-        ar.splice(e, 1)
-        context.setBikesFavorites(ar)
-        context.setBikeNum(ar.length)
+        arList = context.bikesFavorites
+        arList.splice(e, 1)
+        context.setBikesFavorites(arList)
+        context.setBikeNum(arList.length)
     }
     return (
         <>

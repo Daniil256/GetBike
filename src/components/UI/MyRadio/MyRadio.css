@@ -5,3 +5,6 @@
 .label input {
     margin-right: 5px;
 }
+.label.active {
+    color: rgb(255, 111, 44);
+}

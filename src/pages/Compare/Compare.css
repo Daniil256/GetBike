@@ -8,9 +8,17 @@
           flex-direction: column;
 }
 
+.Compare .container {
+  margin: 0 auto 0 0;
+}
+
 .Compare .row {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.Compare .row .row {
+  width: 100%;
 }
 
 .Compare .row .options {
@@ -51,23 +59,24 @@
       -ms-flex-pack: start;
           justify-content: start;
   font-weight: 900;
+  line-height: 0.8;
 }
 
 .Compare .row .bike_list .bike-Item table tbody tr td {
-  font-size: 18px;
+  font-size: clamp(12px, 2vw, 18px);
   font-weight: 600;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 50px;
+  height: 8vmin;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0 20px;
+  padding: 0 clamp(3px, 1vw, 20px);
 }
 
 .Compare .row .bike_list .bike-Item table tbody tr td:nth-child(2n + 1) {

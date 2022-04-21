@@ -3,29 +3,32 @@ import { MyRadio } from "../../UI/MyRadio/MyRadio";
 import { BikeItem } from "../BikeItem/BikeItem";
 import './BikeList.css'
 
-export const BikeList = ({ searchAndSortedPosts, setSelectedSort, setInvert, currentCountry }) => {
-    const [active, setActive] = useState(false)
-    const setCheck = (e) => {
-        setActive(e.target.checked)
-        return setInvert(e.target.checked)
-    }
+export const BikeList = ({ searchAndSortedPosts, setSelectedSort, setInvertSort, currentCountry, invertSort }) => {
+    const [activeSort, setActiveSort] = useState(false)
+    const [values] = useState([
+        { value: 'default', name: 'По умолчанию', checked: true },
+        { value: 'cost', name: 'По цене' },
+        { value: 'name', name: 'По названию' },
+    ])
 
     return (
         <div className="bike_list">
-            <div className="block_sort">
+            <div className="option" onClick={() => setActiveSort(!activeSort)}>
+                <span>Сортировка</span>
+                <span className={activeSort ? 'active' : ''}>▲</span>
+            </div>
+            <div className={activeSort ? "block_sort active" : "block_sort"}>
                 <span>найдено моделей: {searchAndSortedPosts.length}</span>
                 <div className="sort">
                     <span>Сортировка</span>
-                    <MyRadio nameInput='sort' values={[
-                        { value: 'default', name: 'По умолчанию', checked: true },
-                        { value: 'cost', name: 'По цене' },
-                        { value: 'name', name: 'По названию' },
-                    ]}
+                    <MyRadio nameInput='sort'
+                        values={values}
                         onChange={setSelectedSort}
                     />
-                    <label className={active ? "symbol invert active" : "symbol invert"}>▲
+                    <label>
+                        {invertSort ? 'По убыванию' : 'По возрастанию'}
                         <input type="checkbox"
-                            onChange={setCheck}
+                            onClick={() => setInvertSort(!invertSort)}
                         />
                     </label>
                 </div>

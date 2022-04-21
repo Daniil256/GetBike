@@ -31,7 +31,7 @@
             line-height: 1.8;
         }
         h2 {
-            font-size: 40px;
+            font-size: clamp(30px, 10vw, 40px);
         }
     }
     .btn_left,
@@ -58,9 +58,21 @@
         }
     }
     .btn_left {
-        left: calc(50% - 50px);
+        right: calc(50% + 20px);
     }
     .btn_right {
-        left: calc(50% + 50px);
+        left: calc(50% + 20px);
+    }
+}
+@media (max-width: 600px) {
+    .TextCarousel {
+        .text {
+            h2,
+            p {
+                max-width: 100%;
+                margin: 0 10px;
+                text-align: justify;
+            }
+        }
     }
 }

@@ -43,7 +43,7 @@
                     bottom: 5%;
                     left: 5vw;
                     z-index: 3;
-                    font-size: 40px;
+                    font-size: clamp(20px, 3vw, 40px);
                     font-weight: 900;
                     color: #fff;
                     background-color: transparent;
@@ -52,6 +52,19 @@
             &.big {
                 width: 65%;
                 height: 60vh;
+            }
+        }
+    }
+}
+@media (max-width: 300px) {
+    .ElectricTransportCategory .block {
+        height: 40vh;
+        .electric__transport__block {
+            width: 45%;
+            height: 20vh;
+            &.big {
+                width: 55%;
+                height: 40vh;
             }
         }
     }
