@@ -33,6 +33,8 @@ export const Bikes = () => {
             })
         }
         setBikeList(ar)
+        setSelectedSort('')
+        setSearchQuery({ name: '' })
     }, [param.category])
 
     const sortedPosts = useMemo(() => {
@@ -71,6 +73,7 @@ export const Bikes = () => {
             String(bikeList[index][Object.keys(searchQuery)[0]]).includes(String(searchQuery[Object.keys(searchQuery)[0]])))
 
     }, [searchQuery, sortedPosts, bikeList, selectedSort])
+
     const lastCountryIndex = currentPage * countriesPerPage
     const firstCountryIndex = lastCountryIndex - countriesPerPage
     const currentCountry = searchAndSortedPosts.slice(firstCountryIndex, lastCountryIndex)

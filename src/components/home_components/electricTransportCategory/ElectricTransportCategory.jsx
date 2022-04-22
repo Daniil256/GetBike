@@ -5,8 +5,8 @@ import './ElectricTransportCategory.css'
 export const ElectricTransportCategory = () => {
     return (
         <div className="ElectricTransportCategory">
-            <Subtitle title='Электротранспорт' link='/electro_bikes' linkName='Смотреть все модели' />
-            <Link to='el_bikes' className="block" >
+            <Subtitle title='Электротранспорт' link='electro_bikes' linkName='Смотреть все модели' />
+            <Link to='electro_bikes' className="block" >
                 <div className="electric__transport__block big">
                     <img src="../img/ElectricTransportPage/1.jpg" alt="error" />
                     <div className="block_title">
