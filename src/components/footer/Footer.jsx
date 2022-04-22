@@ -9,7 +9,7 @@ export const Footer = () => {
                 <li className="logo"><NavLink className="logo" to="/">GetBike<img src="../img/navbar/logo2.png" alt="error" /></NavLink></li>
                 <li><NavLink to="/">Лучшее - семье</NavLink></li>
                 <li><NavLink to="bikes">Велосипеды</NavLink></li>
-                <li><NavLink to="el_bikes">Электротранспорт</NavLink></li>
+                <li><NavLink to="electro_bikes">Электротранспорт</NavLink></li>
                 <li><NavLink to="user">Пользователю</NavLink></li>
                 <li><NavLink to="buy">Где купить</NavLink></li>
             </ul>
