@@ -16,7 +16,7 @@ export const Bikes = () => {
     const [invertSort, setInvertSort] = useState(false)
 
     const [currentPage, setCurrentPage] = useState(1)
-    const [countriesPerPage] = useState(15)
+    const [countriesPerPage] = useState(24)
 
     const param = useParams()
 
@@ -49,7 +49,8 @@ export const Bikes = () => {
 
     const searchAndSortedPosts = useMemo(() => {
         setCurrentPage(1)
-        if (Object.keys(searchQuery)[0] === 'to') {
+        let searchValue = Object.keys(searchQuery)[0]
+        if (searchValue === 'to') {
             return sortedPosts.filter(item =>
                 Number(item.cost) >= Number(searchQuery.to)
                     ?
@@ -58,7 +59,7 @@ export const Bikes = () => {
                     String(item.cost).includes('')
             )
         }
-        if (Object.keys(searchQuery)[0] === 'from') {
+        if (searchValue === 'from') {
             return sortedPosts.filter(item =>
                 Number(item.cost) <= Number(searchQuery.from)
                     ?
@@ -66,13 +67,25 @@ export const Bikes = () => {
                     :
                     String(item.cost).includes(''))
         }
-        if (Object.values(searchQuery)[0] === 'Все') return sortedPosts
-        if (Object.values(searchQuery)[0] === '') return sortedPosts
+        if (searchQuery.category === 'Все' || searchQuery.category === '') return sortedPosts
 
-        return sortedPosts.filter((_item, index) =>
-            String(bikeList[index][Object.keys(searchQuery)[0]]).includes(String(searchQuery[Object.keys(searchQuery)[0]])))
+        return sortedPosts.filter((_item, index) => {
 
-    }, [searchQuery, sortedPosts, bikeList, selectedSort])
+            let searchValueItem = bikeList[index][searchValue]
+            searchValueItem = String(searchValueItem)
+
+            let searchValueInclude = String(searchQuery[searchValue])
+
+            if (searchValue === 'name') {
+                searchValueItem = searchValueItem.toLowerCase()
+                searchValueInclude = searchValueInclude.toLowerCase()
+            }
+
+            return searchValueItem.includes(searchValueInclude)
+        })
+
+
+    }, [searchQuery, sortedPosts, bikeList])
 
     const lastCountryIndex = currentPage * countriesPerPage
     const firstCountryIndex = lastCountryIndex - countriesPerPage

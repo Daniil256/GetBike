@@ -13,7 +13,7 @@ export const MyCheckBox = ({ bikeList, path, value, setSearchQuery }) => {
         <>
             <label className="label">
                 <input type="radio" name='modelYear'
-                    onChange={() => setSearchQuery({ modelYear: 'Все' })}
+                    onChange={() => setSearchQuery({ category: 'Все' })}
                 />
                 Все</label>
             {OnlyUniqueItems.map(item =>

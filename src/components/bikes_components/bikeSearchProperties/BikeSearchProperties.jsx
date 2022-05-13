@@ -19,7 +19,7 @@ export const BikeSearchProperties = ({ active, bikeList, setSearchQuery }) => {
                 <h3>Цена</h3>
                 <MyRadio nameInput='cost'
                     values={[
-                        { value: 'Все', name: 'Все', condition: 'all' },
+                        { value: 'Все', name: 'Все', condition: 'category' },
                         { value: '12000', name: 'до 12000', condition: 'to' },
                         { value: '25000', name: 'до 25000', condition: 'to' },
                         { value: '35000', name: 'от 35000 и выше', condition: 'from' },

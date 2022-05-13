@@ -5,6 +5,7 @@ import './Footer.css'
 export const Footer = () => {
     return (
         <div className="Footer container">
+            <hr />
             <ul>
                 <li className="logo"><NavLink className="logo" to="/">GetBike<img src="../img/navbar/logo2.png" alt="error" /></NavLink></li>
                 <li><NavLink to="/">Лучшее - семье</NavLink></li>

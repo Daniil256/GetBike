@@ -17,11 +17,11 @@
                 z-index: 3;
             }
             &:hover .block_title {
-                background: linear-gradient(to bottom, rgba(184, 184, 184, 0.7) 0%, rgba(255, 255, 255, 0) 50%);
+                background: linear-gradient(to bottom, rgba(184, 184, 184, 0.4) 0%, rgba(255, 255, 255, 0) 50%);
             }
             &:hover .block_title p {
                 opacity: 1;
-                transform: translateY(-5vh);
+                transform: translateY(-2vh);
             }
 
             &.big {
@@ -63,6 +63,7 @@
                     top: 35%;
                     opacity: 0;
                     transition: 0.5s ease;
+                    transform: translateY(4vh);
                 }
             }
         }

@@ -22,7 +22,7 @@ export const BikePage = () => {
     }
 
     return (
-        <div className="BikePage container">
+        <div className="BikePage">
             {BikeList[id].name || BikeList[id].wheelSize || BikeList[id].modelYear
                 ?
                 <Subtitle title={`${BikeList[id].name} ${BikeList[id].wheelSize} (${BikeList[id].modelYear})`} />

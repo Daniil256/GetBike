@@ -2,16 +2,16 @@
     display: flex;
     flex-direction: column;
     .container {
-        margin: 0 auto 0 0;
+        margin: 0 auto;
     }
     .row {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         padding-bottom: 50px;
-        width: 100%;
+        margin: 0 auto;
         .inform {
-            flex: 0 0 250px;
+            flex: 1 0 250px;
             .category {
                 width: 100%;
                 text-align: center;
@@ -70,10 +70,12 @@
     }
     .description {
         background-color: #f3f3f3;
+        width: 100%;
         .container {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
+            margin: 0 auto;
             .container {
                 flex: 0 1 100%;
             }

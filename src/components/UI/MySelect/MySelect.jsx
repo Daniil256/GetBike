@@ -7,14 +7,22 @@ export const MySelect = ({ bikeList, path, setSearchQuery }) => {
             OnlyUniqueItems.push(bikeList[i][path])
         }
     }
-
+    const func = (e) => {
+        if (e.target.value === 'Все')
+            setSearchQuery({ category: e.target.value })
+        else
+            setSearchQuery({ [path]: e.target.value })
+    }
     return (
         <select
-            onChange={(e) => setSearchQuery({ [path]: e.target.value })}
+            onChange={func}
         >
             <option>Все</option>
-            {OnlyUniqueItems.map(item =>
-                <option value={item} key={item}>{item}</option>
-            )}
-        </select>)
+            {
+                OnlyUniqueItems.map(item =>
+                    <option value={item} key={item}>{item}</option>
+                )
+            }
+        </select >
+    )
 }
